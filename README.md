@@ -8,7 +8,6 @@ iOS Swift Dynamics text fields
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
 <a href="https://cocoapods.org/pods/Eureka"><img src="https://img.shields.io/cocoapods/v/Eureka.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/xmartlabs/Eureka/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
-<a href="https://codebeat.co/projects/github-com-xmartlabs-eureka"><img alt="codebeat badge" src="https://codebeat.co/badges/16f29afb-f072-4633-9497-333c6eb71263" /></a>
 </p>
 
 ## Overview
@@ -24,8 +23,6 @@ iOS Swift Dynamics text fields
   + [Validations]
 * [Installation]
 * [FAQ]
-
-**For more information look at [our blog post] that introduces *Eureka*.**
 
 ## Requirements
 
@@ -43,8 +40,6 @@ You can clone and run the Example project to see examples of most of DynamicText
 ## Usage
 
 ### How to create a form
-By extending `FormViewController` you can then simply add sections and rows to the `form` variable.
-
 ```swift
 import DynamicTextField
 
@@ -71,7 +66,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'DynamicTextField', '~> 2.0.0-beta.1'
+pod 'DynamicTextField', '~> 1.0.1'
 ```
 
 Then run the following command:
@@ -81,10 +76,10 @@ $ pod install
 ```
 #### Manually as Embedded Framework
 
-* Clone Eureka as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command from your project root git folder.
+* Clone DynamicTextField by running the following command from your project root git folder.
 
 ```bash
-$ git submodule add https://github.com/xmartlabs/Eureka.git
+$ git submodule add https://github.com/MarceloOscarJose/DynamicTextField.git
 ```
 
 * Open DynamicTextField folder that was created by the previous git submodule command and drag the DynamicTextField.xcodeproj into the Project Navigator of your application's Xcode project.
@@ -176,38 +171,6 @@ This functions are just called when a row is added to the form and when a row it
 #### onCellUnHighlight doesn't get called unless onCellHighlight is also defined
 
 Look at this [issue](https://github.com/xmartlabs/DynamicTextField/issues/96).
-
-You can see how the rest of custom operators are implemented [here](https://github.com/xmartlabs/Eureka/blob/master/Source/Core/Operators.swift).
-
-It's up to you to decide if you want to use DynamicTextField custom operators or not.
-
-<!--- In file -->
-[Introduction]: #introduction
-[Requirements]: #requirements
-
-[How to create a Form]: #how-to-create-a-form
-[How to get the form values]: #how-to-get-the-form-values
-[Examples]: #examples
-[Usage]: #usage
-[Operators]: #operators
-[Rows]: #rows
-[Using the callbacks]: #using-the-callbacks
-[Section Header and Footer]: #section-header-and-footer
-[Custom rows]: #custom-rows
-[Basic custom rows]: #basic-custom-rows
-[Custom inline rows]: #custom-inline-rows
-[Custom presenter rows]: #custom-presenter-rows
-[How to create custom inline rows]: #how-to-create-custom-inline-rows
-[Custom rows catalog]: #custom-rows-catalog
-[Dynamically hide and show rows (or sections)]: #hide-show-rows
-[Implementing a custom Presenter row]: #custom-presenter-row
-[Extensibility]: #extensibility
-[Row catalog]: #row-catalog
-[Installation]: #installation
-[FAQ]: #faq
-
-[List sections]: #list-sections
-[Validations]: #validations
 
 * [Installation]
 * [FAQ]
