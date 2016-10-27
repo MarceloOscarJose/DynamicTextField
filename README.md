@@ -4,10 +4,8 @@ iOS Swift Dynamics text fields
 ![DynamicTextField: Elegant form builder in Swift](Eureka.jpg)
 
 <p align="center">
-<a href="https://travis-ci.org/xmartlabs/Eureka"><img src="https://travis-ci.org/xmartlabs/Eureka.svg?branch=master" alt="Build status" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
 <a href="https://cocoapods.org/pods/Eureka"><img src="https://img.shields.io/cocoapods/v/Eureka.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/xmartlabs/Eureka/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 <a href="https://codebeat.co/projects/github-com-xmartlabs-eureka"><img alt="codebeat badge" src="https://codebeat.co/badges/16f29afb-f072-4633-9497-333c6eb71263" /></a>
@@ -102,18 +100,12 @@ $ git submodule add https://github.com/xmartlabs/Eureka.git
 * If you **want to contribute** please feel free to **submit pull requests**.
 * If you **have a feature request** please **open an issue**.
 * If you **found a bug** check older issues before submitting an issue.
-* If you **need help** or would like to **ask general question**, use [StackOverflow]. (Tag `eureka-forms`).
 
-**Before contribute check the [CONTRIBUTING](CONTRIBUTING.md) file for more info.**
+## Author
 
-If you use **DynamicTextField** in your app We would love to hear about it! Drop us a line on [twitter].
+* [Marcelo José](https://github.com/MarceloOscarJose)
 
-## Authors
-
-* [Martin Barreto](https://github.com/mtnBarreto) ([@mtnBarreto](https://twitter.com/mtnBarreto))
-* [Mathias Claassen](https://github.com/mats-claassen) ([@mClaassen26](https://twitter.com/mClaassen26))
-
-## FAQ
+## FAQS
 
 #### How to get the value of a row?
 
@@ -185,51 +177,6 @@ This functions are just called when a row is added to the form and when a row it
 
 Look at this [issue](https://github.com/xmartlabs/DynamicTextField/issues/96).
 
-#### How to update a Section header/footer
-
-* Set up a new header/footer data ....
-
-```swift
-section.header = "Header Title" // use string literal as a header/footer data. HeaderFooterView conforms to ExpressibleByStringLiteral.
-//or
-section.header = HeaderFooterView(title: "Header title \(variable)") // use String interpolation
-//or
-var header = HeaderFooterView<UIView>(.class) // most flexible way to set up a header using any view type
-header.height = { 60 }  // height can be calculated
-header.onSetupView = { view, section in  // each time the view is about to be displayed onSetupView is invoked.
-    view.backgroundColor = .orange
-}
-section.header = header
-```
-
-* Reload the Section to perform the changes
-
-```swift
-section.reload()
-```
-
-These methods are used internally to implement the custom operators as shown bellow:
-
-```swift
-public func +++(left: Form, right: Section) -> Form {
-    left.append(right)
-    return left
-}
-
-public func +=< C : Collection where C.Generator.Element == Section>(inout lhs: Form, rhs: C){
-    lhs.appendContentsOf(rhs)
-}
-
-public func <<<(left: Section, right: BaseRow) -> Section {
-    left.append(right)
-    return left
-}
-
-public func +=< C : Collection where C.Generator.Element == BaseRow>(inout lhs: Section, rhs: C){
-    lhs.appendContentsOf(rhs)
-}
-```
-
 You can see how the rest of custom operators are implemented [here](https://github.com/xmartlabs/Eureka/blob/master/Source/Core/Operators.swift).
 
 It's up to you to decide if you want to use DynamicTextField custom operators or not.
@@ -264,20 +211,9 @@ It's up to you to decide if you want to use DynamicTextField custom operators or
 
 * [Installation]
 * [FAQ]
-
-
 <!--- In Project -->
 [CustomCellsController]: Example/Example/ViewController.swift
 [FormViewController]: Example/Source/Controllers.swift
 
-<!--- External -->
-[XLForm]: https://github.com/xmartlabs/XLForm
-[DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
-[StackOverflow]: http://stackoverflow.com/questions/tagged/eureka-forms
-[our blog post]: http://blog.xmartlabs.com/2015/09/29/Introducing-Eureka-iOS-form-library-written-in-pure-Swift/
-[twitter]: https://twitter.com/xmartlabs
-[EurekaCommunity]: https://github.com/EurekaCommunity
-
 # Change Log
-
 This can be found in the [CHANGELOG.md](CHANGELOG.md) file.
