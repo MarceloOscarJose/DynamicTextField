@@ -25,7 +25,6 @@ s.homepage = "[Your RWPickFlavor Homepage URL Goes Here]"
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/MarceloOscarJose/DynamicTextField.git", :tag => "#{s.version}"}
 
-
 # 7
 s.framework = "UIKit"
 
