@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1A7F891E3D7C5300203C3E /* DynamicTextFieldRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7F851E3D7C5300203C3E /* DynamicTextFieldRule.swift */; };
+		9C1A7F8A1E3D7C5300203C3E /* DynamicTextFieldEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7F861E3D7C5300203C3E /* DynamicTextFieldEntry.swift */; };
+		9C1A7F8B1E3D7C5300203C3E /* DynamicTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7F871E3D7C5300203C3E /* DynamicTextFieldDelegate.swift */; };
+		9C1A7F8C1E3D7C5300203C3E /* DynamicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7F881E3D7C5300203C3E /* DynamicTextField.swift */; };
 		9C9026D61E3D7A7E00422C9D /* DynamicTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9026D41E3D7A7E00422C9D /* DynamicTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0E0056F7CAEBA969C3325AE /* Pods_DynamicTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFDA421020BA84EA9D795FE /* Pods_DynamicTextField.framework */; };
 /* End PBXBuildFile section */
@@ -14,6 +18,10 @@
 /* Begin PBXFileReference section */
 		7AFDA421020BA84EA9D795FE /* Pods_DynamicTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF3B6EBE6EB1FE415FFA26C /* Pods-DynamicTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicTextField/Pods-DynamicTextField.release.xcconfig"; sourceTree = "<group>"; };
+		9C1A7F851E3D7C5300203C3E /* DynamicTextFieldRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTextFieldRule.swift; sourceTree = "<group>"; };
+		9C1A7F861E3D7C5300203C3E /* DynamicTextFieldEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTextFieldEntry.swift; sourceTree = "<group>"; };
+		9C1A7F871E3D7C5300203C3E /* DynamicTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTextFieldDelegate.swift; sourceTree = "<group>"; };
+		9C1A7F881E3D7C5300203C3E /* DynamicTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTextField.swift; sourceTree = "<group>"; };
 		9C9026D11E3D7A7E00422C9D /* DynamicTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9026D41E3D7A7E00422C9D /* DynamicTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicTextField.h; sourceTree = "<group>"; };
 		9C9026D51E3D7A7E00422C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 		9C9026D31E3D7A7E00422C9D /* DynamicTextField */ = {
 			isa = PBXGroup;
 			children = (
+				9C1A7F851E3D7C5300203C3E /* DynamicTextFieldRule.swift */,
+				9C1A7F861E3D7C5300203C3E /* DynamicTextFieldEntry.swift */,
+				9C1A7F871E3D7C5300203C3E /* DynamicTextFieldDelegate.swift */,
+				9C1A7F881E3D7C5300203C3E /* DynamicTextField.swift */,
 				9C9026D41E3D7A7E00422C9D /* DynamicTextField.h */,
 				9C9026D51E3D7A7E00422C9D /* Info.plist */,
 			);
@@ -121,6 +133,7 @@
 				TargetAttributes = {
 					9C9026D01E3D7A7E00422C9D = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -190,6 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1A7F8A1E3D7C5300203C3E /* DynamicTextFieldEntry.swift in Sources */,
+				9C1A7F8B1E3D7C5300203C3E /* DynamicTextFieldDelegate.swift in Sources */,
+				9C1A7F891E3D7C5300203C3E /* DynamicTextFieldRule.swift in Sources */,
+				9C1A7F8C1E3D7C5300203C3E /* DynamicTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E02E2E4F4DA1E6D68213854B /* Pods-DynamicTextField.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -310,6 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NetworkCode.DynamicTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -318,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BF3B6EBE6EB1FE415FFA26C /* Pods-DynamicTextField.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -352,6 +372,7 @@
 				9C9026DB1E3D7A7E00422C9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
