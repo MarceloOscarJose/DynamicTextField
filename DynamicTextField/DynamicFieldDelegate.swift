@@ -8,13 +8,13 @@
 
 import UIKit
 
-class DynamicTextFieldDelegate: UITextField, UITextFieldDelegate {
+class DynamicFieldDelegate: UITextField, UITextFieldDelegate {
 
     // MARK - Properties
     private var maxLength: Int = Int.max
     private var maskText : String?
-    private var validationRules: [DynamicTextFieldRule] = []
-    private var entryType: String = DynamicTextFieldEntry.Default
+    private var validationRules: [DynamicFieldRule] = []
+    private var entryType: String = DynamicFieldEntry.Default
     private var fieldError: String = ""
 
     // MARK - Properties Setters
@@ -27,7 +27,7 @@ class DynamicTextFieldDelegate: UITextField, UITextFieldDelegate {
     func setEntryType(entry: String) {
         self.entryType = entry
     }
-    func setValidationRules(rules: [DynamicTextFieldRule]) {
+    func setValidationRules(rules: [DynamicFieldRule]) {
         self.validationRules = rules
     }
     func getFieldError() -> String {
@@ -64,8 +64,8 @@ class DynamicTextFieldDelegate: UITextField, UITextFieldDelegate {
                 let maskValue = mask[mask.index(mask.startIndex, offsetBy: (futureText.characters.count-1))]
                 
                 switch maskValue {
-                case "d": return string.range(of: DynamicTextFieldEntry.Numeric, options: .regularExpression) != nil
-                case "s": return string.range(of: DynamicTextFieldEntry.Alpha, options: .regularExpression) != nil
+                case "d": return string.range(of: DynamicFieldEntry.Numeric, options: .regularExpression) != nil
+                case "s": return string.range(of: DynamicFieldEntry.Alpha, options: .regularExpression) != nil
                 case "*": return true
                 default:
                     textField.text = textField.text! + String(maskValue)

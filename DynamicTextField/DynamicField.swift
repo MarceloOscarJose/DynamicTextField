@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DynamicTextField {
+class DynamicField {
 
     private var registeredFields:[DynamicTextFieldDelegate] = []
     private var fieldError: String?

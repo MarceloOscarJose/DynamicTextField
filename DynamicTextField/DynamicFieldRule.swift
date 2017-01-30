@@ -6,7 +6,7 @@
 //  Copyright © 2016 Marcelo Oscar José. All rights reserved.
 //
 
-class DynamicTextFieldRule {
+class DynamicFieldRule {
     
     static let Email          = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$"
     static let ZipCode        = "^[0-9]{5}(-[0-9]{4})?$"

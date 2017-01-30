@@ -6,7 +6,7 @@
 //  Copyright © 2016 Marcelo Oscar José. All rights reserved.
 //
 
-class DynamicTextFieldEntry {
+class DynamicFieldEntry {
 
     static let Numeric: String       = "^[0-9]?$"
     static let Alpha: String         = "^[a-z A-Z]?$"
