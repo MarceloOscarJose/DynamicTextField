@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DynamicFieldDelegate: UITextField, UITextFieldDelegate {
+open class DynamicFieldDelegate: UITextField, UITextFieldDelegate {
 
     // MARK - Properties
     private var maxLength: Int = Int.max
@@ -35,13 +35,13 @@ class DynamicFieldDelegate: UITextField, UITextFieldDelegate {
     }
 
     // MARK - Lifecycle
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.delegate = self
     }
 
     // MARK - Delegate
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         guard string.characters.count > 0 else {
             return true

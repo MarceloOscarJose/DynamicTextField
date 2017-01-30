@@ -8,16 +8,20 @@
 
 import UIKit
 
-class DynamicField {
+open class DynamicField {
 
     private var registeredFields:[DynamicFieldDelegate] = []
     private var fieldError: String?
 
-    func getFieldError() -> String {
+    public init() {
+        
+    }
+
+    public func getFieldError() -> String {
         return self.fieldError!
     }
 
-    func registerField(field: DynamicFieldDelegate, maxLength: Int?, entryType: String?, validationRules: [DynamicFieldRule]?, maskText: String?) {
+    public func registerField(field: DynamicFieldDelegate, maxLength: Int?, entryType: String?, validationRules: [DynamicFieldRule]?, maskText: String?) {
 
         if let max = maxLength {
             field.setMaxLength(max: max)
@@ -35,7 +39,7 @@ class DynamicField {
         registeredFields.append(field)
     }
 
-    func validateFields() -> Bool{
+    public func validateFields() -> Bool{
         for field in registeredFields {
             if !field.isValid() {
                 self.fieldError = field.getFieldError()
